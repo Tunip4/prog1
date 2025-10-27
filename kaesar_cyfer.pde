@@ -7,12 +7,12 @@ String message = "Hello, World";
             encrypted = encrypt("Hello",5);
               text("Original: " +message, 20,80);
                 text("Encrytped: "+encrypted,20,120);
-      }
+                  }
                     String encrypt(String text, int shift){
                       String result="";
-                        for(int i=0; i<=text.length(); itt){
+                        for(int i=0; i<text.length(); i++){
                           char c =text.charAt(i);
                             c+=shift;
                               result+=c;
-                            
-      }
+                                }
+                                  return result;}
