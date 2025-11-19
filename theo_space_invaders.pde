@@ -13,19 +13,22 @@ void draw(){
   fill(0,255,0);
   rect(spaceshipx,height-40,40,20);
   fill(255,255,255);
+
   for(int i=0; i<16; i++){
     if(isAlive[i]){
     rect(i*30+20,50,11,8);
     }
   }
+  
   if(bulletFired){
   fill(0,255,0);
   rect(bulletx,bullety,5,10);
   bullety-=5;
   if(bullety<0){
+  bulletFired=false;}
     for(int i=0; i<16; i++){
       if(isAlive[i]){
-        if(bulletx>alienx[i] && bulletx<alienx[i] +40 && bullety>50 && bullety<90){
+        if(bulletx>alienx[i] && bulletx<alienx[i] +20 && bullety>50 && bullety<90){
           isAlive[i]=false;
           bulletFired=false;
           score +=1;
@@ -33,8 +36,8 @@ void draw(){
       }
     }
   }
-  }
-}
+  fill(255   );
+    text(score,30,30);}
 void keyPressed(){
   if(keyCode==LEFT&&spaceshipx>0){
   spaceshipx-=10;
