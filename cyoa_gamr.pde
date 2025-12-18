@@ -4,19 +4,34 @@ void setup(){
   textSize(12);
   textAlign(CENTER,CENTER);
 }
-if(start){
+void draw(){
+  background(#80FF00);
+if(scene.equals("start")){
+  drawScene("A Sacabambabspis appears in a flash of light.", "library","cafe");
   //wake up. library or cafe?
-else if(library){
-  //you were eaten by a horde of autistic creatures
-else if(cafe){
-  //in cafe
-  
-  
+}else if(scene.equals("library")){
+  drawEnd("you were eaten by a horde of autistic creatures");//put in the tf2 coconut
+}else if(scene.equals("cafe")){
+  drawEnd("barricaded in cafe. game end");//in cafe
+}
+}
   
   void drawScene(String story, String option1, String option2){
-    fill(0)
-    text(story, width/2,300,120)
+    fill(0);
+    text(story, width/2,300,120);
     rect(150,250,100,50,200);
+    
+    //button 1
+    fill(#4A412A);
+    rect(150,250,250,310);
+    fill(0);
+    text(option1,200,275);
+    //button2
+    fill(#FF7276);
+    rect(350,450,250,310);
+    fill(0);
+    text(option2,400,275);
+    
   void mousePressed(){
     if(scene.equals("library")|| scene.equals("thing___")|| 
     scene="start";
