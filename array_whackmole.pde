@@ -17,7 +17,12 @@ for(int row=0; row<3; row++){
 }
 void draw(){
 background(0);
-for(int i=0;i<=9;i++){
+for(int i=0;i<9;i++){
   fill(#793E06);
+  ellipse(xPosition[i],yPosition[i],120,80);
+  if(moleIsUp[i]){
+    fill(3);
+    ellipse(xPosition[i],yPosition[i]-20,80,80);
+}
 }
 }
