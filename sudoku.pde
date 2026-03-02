@@ -16,7 +16,7 @@ void setup(){
   size(540,540);
 }
 void draw(){
-  background(588);
+  background(255);
   drawGrid();
 }
 void drawGrid(){
